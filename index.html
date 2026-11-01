@@ -3,110 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hamel Properties | Coming Soon</title>
-<meta name="description" content="Something new is coming to HamelProperties.com.">
-<meta name="robots" content="noindex, nofollow">
+<title>Hamel Properties | Commercial Property Development and Management</title>
+<meta name="description" content="Hamel Properties develops, owns and manages commercial real estate in Massachusetts, New Hampshire and Florida.">
 <meta name="theme-color" content="#0b1220">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0b1220;
-    --bg2: #111b2e;
-    --ink: #f3efe6;
-    --muted: #9aa4b5;
-    --accent: #c9a96e;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body {
-    background: radial-gradient(120% 90% at 50% 10%, var(--bg2) 0%, var(--bg) 60%);
-    color: var(--ink);
-    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 48px 16px;
-    position: relative;
-    z-index: 1;
-  }
-  .mark {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(1.9rem, 7.2vw, 5.2rem);
-    letter-spacing: 0.16em;
-    margin-right: -0.16em; /* optically center tracked text */
-    line-height: 1;
-    opacity: 0;
-    animation: rise 1.6s ease-out 0.2s forwards;
-  }
-  .rule {
-    width: 0;
-    height: 1px;
-    background: var(--accent);
-    margin: 32px auto;
-    animation: draw 1.4s ease-out 1s forwards;
-  }
-  .tag {
-    font-size: clamp(0.8rem, 2.4vw, 0.95rem);
-    letter-spacing: 0.42em;
-    margin-right: -0.42em;
-    text-transform: uppercase;
-    color: var(--muted);
-    opacity: 0;
-    animation: fade 1.4s ease-out 1.6s forwards;
-  }
-  footer {
-    text-align: center;
-    padding: 24px 16px 32px;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    color: #5d6779;
-    position: relative;
-    z-index: 1;
-  }
-  .glow {
-    position: fixed;
-    left: 50%;
-    bottom: -40vh;
-    width: 140vw;
-    height: 70vh;
-    transform: translateX(-50%);
-    background: radial-gradient(closest-side, rgba(201,169,110,0.10), transparent);
-    animation: breathe 9s ease-in-out infinite;
-    pointer-events: none;
-  }
-  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-  @keyframes fade { to { opacity: 1; } }
-  @keyframes draw { to { width: 72px; } }
-  @keyframes breathe { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) {
-    .mark, .tag { animation: none; opacity: 1; }
-    .rule { animation: none; width: 72px; }
-    .glow { animation: none; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=2">
 </head>
 <body>
-  <div class="glow" aria-hidden="true"></div>
-  <main>
-    <h1 class="mark">HAMEL PROPERTIES</h1>
-    <div class="rule" aria-hidden="true"></div>
-    <p class="tag">Coming Soon</p>
-  </main>
-  <footer>&copy; <span id="y">2026</span> HamelProperties.com</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Hamel Properties home">
+      <img src="favicon.svg" alt="">
+      <span>Hamel Properties</span>
+    </a>
+    <nav>
+      <a class="link" href="contact.html">Contact</a>
+      <button class="btn" type="button" data-portal aria-label="Client Portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <span class="btn-label">Client Portal</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Massachusetts &middot; New Hampshire &middot; Florida</div>
+      <h1>Commercial Property Development and Management</h1>
+      <p class="lede">Hamel Properties develops, owns and manages commercial real estate in Massachusetts, New Hampshire and Florida, with a long-term view and a hands-on approach.</p>
+      <div class="rule"></div>
+      <div class="actions">
+        <a class="btn solid" href="contact.html">Make an Inquiry</a>
+        <button class="btn" type="button" data-portal>Client Login</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Hamel Properties &middot; Massachusetts &middot; New Hampshire &middot; Florida</span>
+    <span><a href="#" data-portal>Client Portal</a></span>
+  </div>
+</footer>
+
+<!-- Client portal sign-in (display only: nothing is sent or stored) -->
+<div class="overlay" id="portal" role="dialog" aria-modal="true" aria-labelledby="portal-title">
+  <div class="modal">
+    <button class="close" type="button" aria-label="Close" data-close>&times;</button>
+    <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.2"/></svg>
+    <h3 id="portal-title">Client Portal</h3>
+    <p class="sub">Authorized users only</p>
+    <form id="portal-form" autocomplete="off" novalidate>
+      <div class="field"><label for="p-user">Username or email</label><input id="p-user" autocomplete="off"></div>
+      <div class="field"><label for="p-pass">Password</label><input id="p-pass" type="password" autocomplete="off"></div>
+      <div class="row">
+        <label><input type="checkbox"> Remember me</label>
+        <a id="p-forgot">Forgot password?</a>
+      </div>
+      <button class="btn solid" type="submit" id="p-submit">Sign In</button>
+      <div class="msg" id="p-msg" role="alert"></div>
+    </form>
+    <p class="legal">Access is by invitation only. Unauthorized access is prohibited.</p>
+  </div>
+</div>
+
+<script src="site.js?v=2"></script>
 </body>
 </html>

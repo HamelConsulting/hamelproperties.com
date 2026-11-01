@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Hamel Properties</title>
+<meta name="description" content="Hamel Properties develops, owns and manages commercial real estate in Massachusetts, New Hampshire and Florida.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=2">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Hamel Properties home">
+      <img src="favicon.svg" alt="">
+      <span>Hamel Properties</span>
+    </a>
+    <nav>
+      <a class="link" href="contact.html">Contact</a>
+      <button class="btn" type="button" data-portal aria-label="Client Portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <span class="btn-label">Client Portal</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="contact-page">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Inquiries</h2>
+      <p class="note" style="margin-top:18px;max-width:320px">For tenants, partners, brokers and vendors. A member of our team will respond to appropriate inquiries.</p>
+    </div>
+    <div>
+      <form id="contact-form" novalidate>
+        <!-- Web3Forms access key. Messages are delivered to the email on the Web3Forms account. -->
+        <input type="hidden" name="access_key" value="c0d44a11-3651-4f8d-9a94-a50320c27fd2">
+        <input type="hidden" name="subject" value="New inquiry from hamelproperties.com">
+        <input type="hidden" name="from_name" value="Hamelproperties.com Contact Form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <div class="grid">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field full"><label for="f-topic">Regarding</label>
+            <select id="f-topic" name="regarding">
+              <option>General inquiry</option>
+              <option>Current tenant</option>
+              <option>Leasing</option>
+              <option>Brokerage or investment</option>
+              <option>Vendor or contractor</option>
+            </select>
+          </div>
+          <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        </div>
+        <div class="form-foot">
+          <span class="note">Your information is kept confidential.</span>
+          <button class="btn solid" type="submit" id="f-submit">Send Inquiry</button>
+        </div>
+        <div class="status" id="f-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Hamel Properties &middot; Massachusetts &middot; New Hampshire &middot; Florida</span>
+    <span><a href="#" data-portal>Client Portal</a></span>
+  </div>
+</footer>
+
+<!-- Client portal sign-in (display only: nothing is sent or stored) -->
+<div class="overlay" id="portal" role="dialog" aria-modal="true" aria-labelledby="portal-title">
+  <div class="modal">
+    <button class="close" type="button" aria-label="Close" data-close>&times;</button>
+    <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.2"/></svg>
+    <h3 id="portal-title">Client Portal</h3>
+    <p class="sub">Authorized users only</p>
+    <form id="portal-form" autocomplete="off" novalidate>
+      <div class="field"><label for="p-user">Username or email</label><input id="p-user" autocomplete="off"></div>
+      <div class="field"><label for="p-pass">Password</label><input id="p-pass" type="password" autocomplete="off"></div>
+      <div class="row">
+        <label><input type="checkbox"> Remember me</label>
+        <a id="p-forgot">Forgot password?</a>
+      </div>
+      <button class="btn solid" type="submit" id="p-submit">Sign In</button>
+      <div class="msg" id="p-msg" role="alert"></div>
+    </form>
+    <p class="legal">Access is by invitation only. Unauthorized access is prohibited.</p>
+  </div>
+</div>
+
+<script src="site.js?v=2"></script>
+</body>
+</html>
